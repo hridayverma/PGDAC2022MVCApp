@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Form for Passing Data using Parameter</h2>
+<hr />
+<form method="post">
+    <pre>
+    <input type="text" name="Id" placeholder="Enter ID Here" />
+
+    <input type="text" name="Name" placeholder="Enter Name Here" />
+
+    <input type="number" name="Salary" placeholder="Enter Salary Here" />
+
+    <input type="submit" value="Submit" />
+    </pre>
+</form>
+
+
+<h2>Form for Passing Data using Request</h2>
+<hr />
+@using (Html.BeginForm("DataUsingRequest", "PassingData", FormMethod.Post))
+{
+    <pre>
+    <input type="text" name="Id" placeholder="Enter ID Here" />
+
+    <input type="text" name="Name" placeholder="Enter Name Here" />
+
+    <input type="number" name="Salary" placeholder="Enter Salary Here" />
+
+    <input type="submit" value="Submit" />
+       
+    </pre>
+}
+
+<h2>Form for Passing Data using FormCollection</h2>
+<hr />
+@using (Html.BeginForm("DataUsingForm","PassingData"))
+{
+    <pre>
+    <input type="text" name="Id" placeholder="Enter ID Here" />
+
+    <input type="text" name="Name" placeholder="Enter Name Here" />
+
+    <input type="number" name="Salary" placeholder="Enter Salary Here" />
+
+    <input type="submit" value="Submit" />       
+    </pre>
+}
+

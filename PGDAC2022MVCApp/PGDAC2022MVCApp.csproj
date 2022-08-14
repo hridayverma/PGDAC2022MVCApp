@@ -122,6 +122,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PassingDataController.cs" />
+    <Compile Include="Controllers\StudnetController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -167,6 +169,10 @@
     <Content Include="Views\Demo\First.cshtml" />
     <Content Include="Views\Demo\Second.cshtml" />
     <Content Include="Views\Demo\Details.cshtml" />
+    <Content Include="Views\PassingData\Index.cshtml" />
+    <Content Include="Views\PassingData\StronglyBinding.cshtml" />
+    <Content Include="Views\PassingData\RazorDemo.cshtml" />
+    <Content Include="Views\Studnet\GetStudentCourses.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

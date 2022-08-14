@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "RazorDemo,working with Razor Syntax";
+}
+
+<h2>Working with Razor Syntax</h2>
+<hr />
+@(10 + 20)
+<br />
+@DateTime.Now
+<br />
+
+@{
+    int num1 = 20;
+    int num2 = 30;
+    int sum = num1 + num2;
+    <p>@sum</p>
+
+    //Write("<p>" + sum + "</p>");
+}
+
+<p>Sum is:@sum</p>
+
+hriday@gmail.com
+<br />
+
+@@hridayverma
+
+<br />
+@{ var x = 20; var y = 30; var z = 50;}
+
+@if (x > y && x > z)
+{
+    <p>Max is:@x</p>
+}
+else if (y > z)
+{
+    <b>Max is:@y</b>
+}
+else
+{
+    <h2>Max is:@z</h2>
+}
+
+<br />
+<h2>Loop Demo</h2>
+
+<ul>
+    @for (int i = 0; i < 20; i++)
+    {
+        <li>@i</li>
+    }
+
+</ul>
+
+@{ 
+
+    var cities = new string[] { "Noida", "Delhi", "Mumbai", "Patna", "Lucknow" };
+}
+
+<h2>City List</h2>
+<ol>
+    @foreach (var item in cities)
+    {
+        <li>@item</li>
+    }
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
