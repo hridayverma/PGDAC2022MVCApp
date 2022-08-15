@@ -1,0 +1,17 @@
+﻿@using PGDAC2022MVCApp.Models  <!--Importing namespace to access the members on view-->
+
+@{
+    ViewBag.Title = "CustomHelpersView";
+}
+
+<h2>Using  Custom Helpers</h2>
+
+@*<img  src="~/Content/Images/ChristtheRedeemer.jpg" />*@
+
+@CustomHelper.Image(src:"/Content/Images/Colosseum.jpg")
+
+<br />
+@CustomHelper.Image("/Content/Images/ChristtheRedeemer.jpg",width:"200px", height:"200px")
+
+
+@Html.Button()  <!--calling custom helper Extension method-->

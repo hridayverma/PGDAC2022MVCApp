@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>HTML Helpers Demo Page</h2>
+
+@{
+    var courses = new string[] { "C", "C++", "Java", "PHP", "C#" };
+    var cities = new string[] { "Noida", "Delhi", "Mumbai", "Patna" };
+
+}
+
+<ul>
+    <h3>Courses List:</h3>
+    @foreach (var item in courses)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+
+<ul>
+    <h3>City List:</h3>
+    @foreach (var item in cities)
+    {
+        <li>@item</li>
+    }
+</ul>
+<!--Creating helper-->
+@helper GenerateList(string listCaption, string[] listdata)
+{
+
+    <h3>@listCaption:</h3>
+    <ul>
+        @foreach (var item in listdata)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+@helper Button(string name="Button1",string type="submit",string value="Submit") { 
+        <input name="@name" id="@name" type="@type" value="@value"     />    
+    }
+<h2>Generating list using Inline helpers</h2>
+<!--Calling Inline helpers-->
+@GenerateList("Cousres List", courses)
+@GenerateList("City List", cities)
+<h2>Using Standard HTML helpers </h2>
+@using (Html.BeginForm()) {
+<pre>
+<label>     ID:</label>@Html.TextBox("Id")
+
+<label>   Name:</label>@Html.TextBox("Name")
+
+<label>Address:</label>@Html.TextArea("Address")
+<label> Gender:</label>@Html.RadioButton("Gender","Male")<label>Male</label> @Html.RadioButton("Gender","FeMale")<label>Female</label>
+
+<label>  City :</label>@Html.DropDownList("City",new SelectList(cities),"--Select City--")
+
+@Html.CheckBox("terms","accept")<label>I Accept @Html.ActionLink("Terms & Conditions","Terms")</label>
+
+@Button(name:"BtnRegister", value:"Register Me")
+</pre>
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

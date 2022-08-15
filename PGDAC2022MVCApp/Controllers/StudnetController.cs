@@ -9,7 +9,7 @@ namespace PGDAC2022MVCApp.Controllers
     public class StudnetController : Controller
     {
         // GET: Studnet
-        [Route("students/{id}/courses")]
+       // [Route("students/{id}/courses")]
         public ViewResult GetStudentCourses(int id)
         {
             List<string> courseList=null;
